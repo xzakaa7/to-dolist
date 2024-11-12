@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f9fc;
+  display: flex;
+  
+  justify-content: center;
+  align-items: center;
+    max-height: 2000vh;
+  
+}
+
+.container {
+  background-color: #fff;
+  
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  width: 320px;
+  text-align: center;
+  overflow: hidden; 
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.clock {
+  font-size: 1.2em;
+  color: #888;
+  margin-bottom: 15px;
+}
+
+.quote {
+  font-style: italic;
+  color: #555;
+  background-color: #f0f8ff;
+  padding: 8px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.progress-container {
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 10px;
+  height: 10px;
+}
+
+#progressBar {
+  height: 15px;
+  width: 0;
+  background-color: #4caf50;
+  transition: width 0.4s ease;
+}
+
+#progressText {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.input-container {
+  display: flex;
+  gap: 5px;
+}
+
+#taskInput {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+button {
+  padding: 8px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #388e3c;
+}
+
+
+#taskList,
+#historyList {
+  margin-top: 20px;
+  max-height: 9900px;           /* Menentukan tinggi maksimal area daftar tugas */
+  overflow-y: auto;            /* Menambahkan scroll jika konten melebihi tinggi */
+  margin-top: 20px;
+  padding: 0;
+  list-style-type: none;
+  text-align: left;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px; /* Perbesar padding untuk lebih ruang */
+  background-color: #f9f9f9;
+  margin-bottom: 12px; /* Beri jarak antar tugas */
+  border-radius: 8px; /* Perbesar border-radius untuk sudut yang lebih halus */
+  border: 2px solid #ddd; /* Perbesar border */
+  box-sizing: border-box; /* Agar padding dan border tidak mempengaruhi ukuran total */
+}
+
+.task-item span {
+  display: inline-block;
+  max-width: 70%; /* Atur lebar teks tugas */
+  word-wrap: break-word; /* Membungkus teks jika terlalu panjang */
+  vertical-align: middle;
+  padding-right: 10px; /* Memberi ruang antara teks dan tombol */
+}
+
+.task-item button {
+  margin-left: 10px; /* Memberikan jarak antara tombol */
+  padding: 8px 12px;
+  font-size: 1em;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.task-item button:hover {
+  background-color: #d32f2f;
+}
+
+.task-item .complete-btn {
+  background-color: #4caf50;
+}
+
+.task-item .complete-btn:hover {
+  background-color: #388e3c;
+}
+
+.task-item .delete-btn {
+  background-color: #ff5252; /* Warna merah untuk tombol hapus */
+  color: #fff;
+}
+
+.task-item .delete-btn:hover {
+  background-color: #d32f2f; /* Warna lebih gelap saat dihover */
+}
+.history-btn {
+  background-color: #e0e0e0; /* Warna abu-abu */
+  color: #333;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px; /* Memberi jarak dengan elemen di atasnya */
+  transition: background-color 0.3s;
+}
+
+.history-btn:hover {
+  background-color: #bdbdbd; /* Warna abu-abu lebih gelap saat dihover */
+}
+#historyList {
+  display: none; /* Sembunyikan riwayat secara default */
+  margin-top: 20px;
+}
+
